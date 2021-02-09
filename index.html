@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="node_modules/animejs/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: cat-funy;
+            src: url("/media/Fonts/visitor2.ttf") !important;
+        }
+
+        audio {
+            display: none;
+        }
+
+        body {
+            background-image: url("https://i.pinimg.com/originals/c9/46/27/c94627ca6c5147bc87157df09027ded3.gif") !important;
+            overflow: hidden;
+            font-family: cat-funy !important;
+            font-size: 5rem;
+            color: white;
+        }
+
+        .welcome {
+            position: absolute;
+            bottom: -40px;
+            user-select: none;
+            background-image: url(media/0a02775e9228f1d429a1d9049ac15965.gif);
+            width: 100%;
+            height: 10%;
+            background-size: contain;
+            z-index: 0;
+        }
+        .hello{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="uros hidden-sm hidden-xs"  style=" z-index: 4;"><img src="media/cat.gif"alt="" class="img-responsive" srcset=""></div>
+    <div class="uros hidden-lg hidden-md" ><img src="media/cat-m.gif"alt="" class="img-responsive hidden-xl hidden-md" srcset=""></div>
+    <div class="hello">
+        <img src="media/Untitled-1.png" class="img-responsive ">
+    </div>
+
+    <div class="welcome hidden-sm hidden-xs" style="font-family: cat-funy;" ></div>
+
+    <audio autoplay="true" src="media/nyandoge.mp3">
+
+        <script>
+
+            var sizeW = window.innerWidth - 280;
+            var sizeH = window.innerHeight - 220;
+
+            console.log(sizeW)
+
+            anime({
+                targets: '.uros',
+                keyframes: [
+                    { translateY: 0 },
+                    { translateX: sizeW },
+                    { translateY: sizeH },
+                    { translateX: 0 },
+                    { translateY: 0 },
+
+                ],
+                duration: 7000,
+                easing: 'easeOutElastic(1, .8)',
+                easing: 'easeInOutSine',
+                loop: true
+            })
+
+            // anime({
+            //     targets: '.welcome',
+            //     keyframes: [
+   
+            //         { translateX: -sizeW },
+            //         { translateX: sizeW },
+
+                    
+
+            //     ],
+            //     duration: 8500,
+            //     // easing: 'easeOutElastic(1, .8)',
+            //     easing: 'easeInOutSine',
+            //     loop: true
+            // })
+
+           
+
+
+
+
+        </script>
+
+</body>
+
+</html>
